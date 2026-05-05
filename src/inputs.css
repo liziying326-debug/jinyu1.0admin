@@ -1,0 +1,79 @@
+/* 自定义输入框样式 - 覆盖浏览器默认样式 */
+@layer components {
+  /* 文本输入框、密码输入框、电子邮件输入框等 */
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="search"],
+  textarea,
+  select {
+    @apply w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 text-sm outline-none transition-all;
+  }
+  
+  /* 焦点状态 */
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="tel"]:focus,
+  input[type="url"]:focus,
+  input[type="search"]:focus,
+  textarea:focus,
+  select:focus {
+    @apply bg-white ring-2 ring-blue-100 border-blue-500;
+  }
+  
+  /* 禁用状态 */
+  input[type="text"]:disabled,
+  input[type="password"]:disabled,
+  input[type="email"]:disabled,
+  input[type="number"]:disabled,
+  input[type="tel"]:disabled,
+  input[type="url"]:disabled,
+  input[type="search"]:disabled,
+  textarea:disabled,
+  select:disabled {
+    @apply text-gray-500 cursor-not-allowed bg-gray-100;
+  }
+  
+  /* 选择器（下拉菜单）样式 */
+  select {
+    @apply appearance-none bg-no-repeat;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+  }
+  
+  /* 文本区域样式 */
+  textarea {
+    @apply min-h-[100px] resize-y;
+  }
+  
+  /* 复选框和单选按钮样式 */
+  input[type="checkbox"],
+  input[type="radio"] {
+    @apply w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500;
+  }
+  
+  /* 文件输入框样式 */
+  input[type="file"] {
+    @apply text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100;
+  }
+}
+
+/* 日期和时间输入框样式 */
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"] {
+  @apply w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 text-sm outline-none transition-all;
+}
+
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="datetime-local"]:focus {
+  @apply bg-white ring-2 ring-blue-100 border-blue-500;
+}

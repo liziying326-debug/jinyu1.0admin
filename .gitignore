@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+
+# 数据库文件
+*.db
+*.db-shm
+*.db-wal
+
+# 上传的文件（图片等）
+about-uploads/
+case-uploads/
+product-images/
+
+# 日志文件
+*.log
+
+# 备份文件
+*.bak
+*.backup-*
+server.js.backup-*
+
+# 临时脚本
+*.py
+migrate-*.mjs
+fix-*.mjs
+create-*.mjs
+
+# Node modules
+node_modules/
